@@ -45,6 +45,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Cell.cs" />
     <Compile Include="CellFace.cs" />
+    <Compile Include="PatchTypes.cs" />
+    <Compile Include="GridProperties.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LinearAlgebra\LinearAlgebra.csproj">
+      <Project>{3343109F-ABD8-40C0-B9EA-B79892F8986A}</Project>
+      <Name>LinearAlgebra</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
