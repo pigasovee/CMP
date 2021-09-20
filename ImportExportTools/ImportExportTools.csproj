@@ -32,6 +32,17 @@
   <ItemGroup>
     <Compile Include="OpenFOAMGridReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="OpenFOAMFileNames.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LinearAlgebra\LinearAlgebra.csproj">
+      <Project>{3343109F-ABD8-40C0-B9EA-B79892F8986A}</Project>
+      <Name>LinearAlgebra</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Grid\CMP.Grid.csproj">
+      <Project>{BF94BAB2-73C2-47FD-B9CD-11A59329C176}</Project>
+      <Name>CMP.Grid</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

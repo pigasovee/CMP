@@ -5,13 +5,15 @@ VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMP_Console", "CMP_Console\CMP_Console.csproj", "{C223B6C0-D490-44BA-BDD2-23579AE8315B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grid", "Grid\Grid.csproj", "{BF94BAB2-73C2-47FD-B9CD-11A59329C176}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMP.Grid", "Grid\CMP.Grid.csproj", "{BF94BAB2-73C2-47FD-B9CD-11A59329C176}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearAlgebra", "LinearAlgebra\LinearAlgebra.csproj", "{3343109F-ABD8-40C0-B9EA-B79892F8986A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polynom", "Polynom\Polynom.csproj", "{2AD72026-8E13-4C20-8D79-01C516C69602}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportExportTools", "ImportExportTools\ImportExportTools.csproj", "{66CDD5BF-7BF3-45A9-8BF1-10F7F96F6136}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LPMSolver", "LPMSolver\LPMSolver.csproj", "{22515E59-4734-4FD9-B659-8DC79636B2B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{66CDD5BF-7BF3-45A9-8BF1-10F7F96F6136}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66CDD5BF-7BF3-45A9-8BF1-10F7F96F6136}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66CDD5BF-7BF3-45A9-8BF1-10F7F96F6136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22515E59-4734-4FD9-B659-8DC79636B2B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22515E59-4734-4FD9-B659-8DC79636B2B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22515E59-4734-4FD9-B659-8DC79636B2B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22515E59-4734-4FD9-B659-8DC79636B2B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

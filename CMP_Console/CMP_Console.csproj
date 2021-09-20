@@ -52,7 +52,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Grid\Grid.csproj">
       <Project>{bf94bab2-73c2-47fd-b9cd-11a59329c176}</Project>
-      <Name>Grid</Name>
+      <Name>CMP.Grid</Name>
     </ProjectReference>
     <ProjectReference Include="..\LinearAlgebra\LinearAlgebra.csproj">
       <Project>{3343109F-ABD8-40C0-B9EA-B79892F8986A}</Project>

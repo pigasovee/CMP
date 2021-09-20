@@ -8,13 +8,19 @@ namespace LinearAlgebra
 {
     public class Vector
     {
-        private int diminsionality_;
-        private double[] values_;
+        private int _diminsionality;
+        private double[] _values;
 
         public Vector(int diminsionality)
         {
-            diminsionality_ = diminsionality;
-            values_ = new double[diminsionality_];
+            _diminsionality = diminsionality;
+            _values = new double[_diminsionality];
+        }
+
+        public Vector(double x, double y, double z)
+        {
+            _diminsionality = 3;
+            _values = new double[3] { x, y, z };
         }
 
         public Vector(double[] values)
@@ -25,9 +31,9 @@ namespace LinearAlgebra
                 throw new ArgumentException("Values can't be null");
             }
 #endif
-            diminsionality_ = values.Length;
-            values_ = new double[diminsionality_];
-            Array.Copy(values, values_, diminsionality_);
+            _diminsionality = values.Length;
+            _values = new double[_diminsionality];
+            Array.Copy(values, _values, _diminsionality);
         }
 
         public static Vector operator +(Vector a, Vector b)
@@ -144,11 +150,11 @@ namespace LinearAlgebra
             }
 #endif
             double[] result = new double[a.Diminsionality];
-            if (diminsionality_ == 3)
+            if (_diminsionality == 3)
             {
-                result[0] = values_[1] * a.values_[2] - values_[2] * a.values_[1];
-                result[1] = values_[2] * a.values_[0] - values_[0] * a.values_[2];
-                result[2] = values_[0] * a.values_[1] - values_[1] * a.values_[0];
+                result[0] = _values[1] * a._values[2] - _values[2] * a._values[1];
+                result[1] = _values[2] * a._values[0] - _values[0] * a._values[2];
+                result[2] = _values[0] * a._values[1] - _values[1] * a._values[0];
             }
             else
             {
@@ -179,7 +185,7 @@ namespace LinearAlgebra
             double result = 0.0;
             for (int i = 0;i< a.Diminsionality;i++)
             {
-                result += a[i] * values_[i];
+                result += a[i] * _values[i];
             }
             return result;
         }
@@ -187,9 +193,9 @@ namespace LinearAlgebra
         public double Magnitude()
         {
             double summ = 0.0;
-            for (int i = 0; i < diminsionality_; i++)
+            for (int i = 0; i < _diminsionality; i++)
             {
-                summ += values_[i] * values_[i];
+                summ += _values[i] * _values[i];
             }
             return Math.Sqrt(summ);
         }
@@ -198,26 +204,26 @@ namespace LinearAlgebra
         {
             get
             {
-                return values_[index];
+                return _values[index];
             }
             set
             {
-                values_[index] = value;
+                _values[index] = value;
             }
         }
 
         public int Diminsionality
         {
-            get => diminsionality_;
+            get => _diminsionality;
         }
 
         public double[] Values_
         {
-            get => values_;
+            get => _values;
             set
             {
-                values_ = value;
-                diminsionality_ = values_.Length;
+                _values = value;
+                _diminsionality = _values.Length;
             }
 
         }
@@ -225,9 +231,9 @@ namespace LinearAlgebra
         public override string ToString()
         {
             string result = "";
-            for (int i = 0; i < diminsionality_; i++)
+            for (int i = 0; i < _diminsionality; i++)
             {
-                result += values_[i].ToString() + " ";
+                result += _values[i].ToString() + " ";
             }
 
             return result;

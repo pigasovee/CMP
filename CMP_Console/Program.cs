@@ -21,14 +21,14 @@ namespace CMP_Console
 
             double[] arr = new double[3];
 
-            arr[0] = 1;
-            arr[1] = 2;
-            arr[2] = 3;
+            arr[0] = 2;
+            arr[1] = 1;
+            arr[2] = -3;
 
             Vector a = new Vector(arr);
-            Vector b = new Vector(new double[3] { 4, 5, 6 });
+            Vector b = new Vector( 1, 2, -1 );
 
-            double c = a.DotProduction(b);
+            Vector c = a.CrossProduction(b);
             Console.WriteLine(c);
         }
     }
